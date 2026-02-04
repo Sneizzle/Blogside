@@ -1,0 +1,80 @@
+{
+  "id": "2026-02-04-mcnotes-kickoff",
+  "title": "MCnotes kickoff: modular dev updates",
+  "date": "2026-02-04",
+  "summary": "Baseline project structure, post blocks, dark-mode tokens, and Ctrl/\u2318K search.",
+  "tags": [
+    "mcnote",
+    "release",
+    "ui"
+  ],
+  "author": "Sneizzle",
+  "blocks": [
+    {
+      "type": "callout",
+      "kind": "info",
+      "title": "Design goals",
+      "body": "Every update should read like a product changelog: clear hierarchy, scannable cards, and timeline-first structure."
+    },
+    {
+      "type": "timeline",
+      "items": [
+        {
+          "title": "Repo bootstrapped",
+          "date": "2026-02-04",
+          "body": "React + Vite + Pages deploy on main.",
+          "badges": [
+            "infra"
+          ]
+        },
+        {
+          "title": "Dark mode tokens",
+          "body": "Native-feeling dark mode with CSS variables + color-scheme.",
+          "badges": [
+            "ui"
+          ]
+        },
+        {
+          "title": "Search modal",
+          "body": "Lazy-loaded search index + FlexSearch (Ctrl/\u2318K).",
+          "badges": [
+            "perf"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "cardGrid",
+      "cards": [
+        {
+          "title": "Blocks not blobs",
+          "body": "Posts are structured blocks (timeline/cards/code/callouts) so every post stays consistent.",
+          "tags": [
+            "content"
+          ]
+        },
+        {
+          "title": "Fast discovery",
+          "body": "Search indexes title, summary, tags at build-time to keep initial JS small.",
+          "tags": [
+            "search"
+          ]
+        },
+        {
+          "title": "Performance targets",
+          "body": "Route splitting + lazy search keeps initial load lean and interactions snappy.",
+          "tags": [
+            "perf"
+          ]
+        },
+        {
+          "title": "GitHub Pages ready",
+          "body": "Configured base path /Blogside/ and BrowserRouter basename.",
+          "tags": [
+            "deploy"
+          ]
+        }
+      ]
+    }
+  ]
+}

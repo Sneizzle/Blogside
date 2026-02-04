@@ -1,0 +1,45 @@
+{
+  "id": "2026-02-04-performance-notes",
+  "title": "Performance notes: stay under 2s",
+  "date": "2026-02-04",
+  "summary": "A practical checklist for keeping initial load < 2s and interactions < 100ms on GitHub Pages.",
+  "tags": [
+    "perf",
+    "guides"
+  ],
+  "blocks": [
+    {
+      "type": "timeline",
+      "items": [
+        {
+          "title": "Bundle budget",
+          "body": "Keep initial JS minimal; load search index after first paint.",
+          "badges": [
+            "budget"
+          ]
+        },
+        {
+          "title": "Avoid runtime parsing",
+          "body": "Prefer build-time content transforms (indexing, excerpting).",
+          "badges": [
+            "runtime"
+          ]
+        },
+        {
+          "title": "List rendering",
+          "body": "If posts grow large, virtualize (or paginate) the home feed.",
+          "badges": [
+            "ui"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "title": "Why prebuild search?",
+      "language": "scripts/build-search.mjs",
+      "code": "npm run prebuild\n# generates src/generated/search-index.json used by lazy SearchModal",
+      "note": "This avoids indexing work during the critical path of initial paint."
+    }
+  ]
+}
